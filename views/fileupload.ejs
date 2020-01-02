@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>fileupload</title>
+    <meta charset="utf-8">
+    <style>
+        img {
+            max-width: 50%;
+            height: auto;
+        }
+
+        li {
+            list-style-type: none;
+            padding: 5px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2><%=fields.title%></h2>
+        <p><%=fields.description%></p>
+        <p><img src="data:image/jpg;base64, <%= fields.photo%>"></p>
+    </div>
+    <div>
+        <ul>
+            <li>Make: <%=fields.make%></li>
+            <li>Model: <%=fields.model%></li>
+            <li>Created on: <%=fields.create%></li>
+            <li>Location:
+                <a class="h4" href="/map?lon=<%=fields.lon%>&lat=<%=fields.lat%>">Map</a>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <button type="button" onclick="location.href='/'">Home</button>
+    </div>
+
+</body>
+
+</html>

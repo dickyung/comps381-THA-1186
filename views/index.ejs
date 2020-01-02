@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Upload a Photo</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div>
+        <h2>Upload a Photo</h2>
+    </div>
+
+    <div>
+        <form action="/upload" method="post" encType="multipart/form-data">
+            <p>
+                <label>Title</label>
+                <br/>
+                <input name="title" type="text" required>
+            </p>
+            <p>
+                <label>Description</label>
+                <br/>
+                <input name="description" type="text" required>
+            </p>
+            <p>
+                <label>Photo</label>
+                <br/>
+                <input name="photo" type="file" required>
+            </p>
+            <p>
+                <button type="submit">Upload</button>
+            </p>
+        </form>
+    </div>
+    <h2><%= message %></h2>
+</body>
+
+</html>
